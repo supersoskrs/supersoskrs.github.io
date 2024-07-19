@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>데이터베이스 보기</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>등록된 사용자 목록</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>사용자 이름</th>
+                <th>비밀번호 (해시값)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user[0] }}</td>
+                    <td>{{ user[1] }}</td>
+                    <td>{{ user[2] }}</td> <!-- 비밀번호 해시값 표시 -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">홈으로 돌아가기</a>
+</body>
+</html>

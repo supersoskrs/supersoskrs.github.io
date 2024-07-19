@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Yoon's 데이터베이스</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Yoon's 데이터베이스</h1>
+    <form action="/submit" method="post">
+        <label for="username">사용자 이름:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="입력">
+    </form>
+    <br>
+    <a href="/view_users" class="view-users-link">데이터베이스 보기</a>
+    <a href="/admin" class="admin-link">관리자 전용</a>
+</body>
+</html>
